@@ -1,0 +1,128 @@
+/*== back - to - top == */
+#back-to-top {
+    background: $red;
+    bottom: 70px;
+    cursor: pointer;
+    display: none;
+    position: fixed;
+    right: 23px;
+    z-index: 99;
+    line-height: 45px;
+    width: 45px;
+    text-align: center;
+    font-size: 20px;
+    @include border-radius( 50%);
+
+    .fa {
+        color: #ffffff;
+    }
+}
+
+/*== support phone == */
+.phone-support {
+    display: block;
+    position: fixed;
+    top: 40%;
+    left: calc(100% - 132px);
+    padding: 5px 15px;
+    background-color: #f59c00;
+    width: 230px;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    z-index: 999999;
+    @include rotate(90deg);
+    .phone-wrap {
+        a {
+            color: #fff;
+        }
+    }
+}
+
+.phone-support-mobile {
+    display: none;
+}
+@media only screen and (max-width: 480px) {
+    .phone-support {
+        display: none;
+    }
+    .phone-support-mobile {
+        display: block;
+        position: fixed;
+        top: 70%;
+        left: calc(100% - 70px);
+        padding: 10px 15px;
+        background-color: #f59c00;
+        width: 45px;
+        height: 45px;
+        border-radius: 50%;
+        z-index: 999999;
+        .phone-wrap {
+            a {
+                color: #fff;
+            }
+        }
+    }
+}
+
+/*== facebook-dialog ==*/
+.btn-fb-dialog {
+    display: block;
+    background-color: $red;
+    border-color: transparent !important;
+    &:hover, &:focus, &:active, &:visited {
+        background-color: $red;
+        border-color: transparent !important;
+        outline: 0;
+        box-shadow: none;
+    }
+}
+
+.btn-fb-dialog-mobile {
+    display: none;
+}
+@media only screen and (max-width: 480px) {
+    .btn-fb-dialog {
+        display: none !important;
+    }
+    .btn-fb-dialog-mobile {
+        display: block;
+        background-color: $red;
+        border-color: transparent !important;
+        position: fixed; 
+        bottom: 15px;
+        left: calc(100% - 68px);
+        border-radius: 50%;
+        width: 45px;
+        height: 45px;
+        text-align: center;
+        &:hover, &:focus, &:active, &:visited {
+            background-color: $red;
+            border-color: transparent !important;
+            outline: 0;
+            box-shadow: none;
+        }
+    }
+}
+
+/*== preload ==*/
+.preload-handle-payment {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 999;
+    background-color: #000;
+    opacity: 0.6;
+    top: 0;
+    left: 0;
+    color: #fff;
+    margin: auto;
+    .wrapper-load {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        height: 27px;
+        left: 0;
+        right: 0;
+    }
+}
